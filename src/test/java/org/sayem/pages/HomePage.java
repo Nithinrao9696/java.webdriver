@@ -1,18 +1,19 @@
-package org.sayem.pages;
+package com.mkyong.examples;
 
-import org.openqa.selenium.WebDriver;
-import org.sayem.browser.Browser;
+import org.junit.jupiter.api.Test;
 
-public class HomePage {
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-    private Browser<WebDriver> browser;
+public class TestMessageBuilder {
 
-    public HomePage(Browser<WebDriver> browser) {
-        this.browser = browser;
+    @Test
+    public void testHelloWorld() {
+        assertEquals("hello world", MessageBuilder.getHelloWorld());
     }
 
-    public HomePage googleSearch(){
-        browser.driver().navigate().to("http://www.google.com");
-        return this;
+    @Test
+    public void testNumber10() {
+        assertEquals(10, MessageBuilder.getNumber10());
     }
+
 }

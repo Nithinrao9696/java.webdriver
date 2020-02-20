@@ -1,16 +1,19 @@
-package org.sayem.testcases;
+package com.mkyong.examples;
 
-import org.sayem.config.TestBase;
-import org.sayem.pages.HomePage;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Test;
 
-public class ChromeTest extends TestBase {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class TestMessageBuilder {
 
     @Test
-    public void googleSearchTest(){
-        new HomePage(getDriver())
-                .googleSearch();
+    public void testHelloWorld() {
+        assertEquals("hello world", MessageBuilder.getHelloWorld());
     }
+
+    @Test
+    public void testNumber10() {
+        assertEquals(10, MessageBuilder.getNumber10());
+    }
+
 }
-
-

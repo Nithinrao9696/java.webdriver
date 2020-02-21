@@ -11,7 +11,7 @@ public class GridExample {
         }else{
             dr=DesiredCapabilities.internetExplorer();
             dr.setBrowserName("iexplore");
-            dr.setPlatform(Platform.WINDOWS);
+            dr.setPlatform(Platform.LINUX);
         }
              
         RemoteWebDriver driver=new RemoteWebDriver(new    URL("http://ap-jenkdx-dev:4444/wd/hub"), dr);
